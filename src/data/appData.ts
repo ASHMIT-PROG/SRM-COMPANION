@@ -5,12 +5,12 @@ export const demoAccounts = [
     id: "1",
     email: "student@srmist.edu.in",
     password: "password123",
-    name: "Rahul Kumar",
+    name: "Pushpanjali",
     studentId: "RA2111003010001",
     department: "CSE",
     year: "2nd Year",
     phone: "+91 98765 43210",
-    avatar: "RK",
+    avatar: "P",
   },
   {
     id: "2",
@@ -56,17 +56,17 @@ export const studyMaterials = [
   },
   {
     id: "3",
-    title: "Operating Systems Video Lecture Series",
+    title: "Operating Systems Complete Notes",
     subject: "Operating Systems",
-    type: "Video Lectures",
+    type: "Notes",
     department: "CSE",
     year: "2nd Year",
-    fileSize: "Playlist",
+    fileSize: "3.8 MB",
     uploadedBy: "Prof. Singh",
     uploadDate: "2024-10-15",
     downloads: 312,
     rating: 4.9,
-    description: "Complete OS video series covering process management, memory management, and file systems."
+    description: "Complete OS notes covering process management, memory management, and file systems."
   },
   {
     id: "4",
@@ -154,17 +154,17 @@ export const studyMaterials = [
   },
   {
     id: "10",
-    title: "Web Development Complete Course",
+    title: "Web Development PYQ Collection",
     subject: "Web Development",
-    type: "Video Lectures",
+    type: "PYQ",
     department: "CSE",
     year: "2nd Year",
-    fileSize: "Video Series",
+    fileSize: "2.1 MB",
     uploadedBy: "Prof. Mishra",
     uploadDate: "2024-10-27",
     downloads: 289,
     rating: 4.8,
-    description: "Full-stack web development course from basics to advanced."
+    description: "Previous year questions for web development course."
   }
 ];
 
@@ -173,42 +173,57 @@ export const timetable = {
     { time: "9:00-10:00", subject: "DBMS", code: "18CS2003", instructor: "Dr. Kumar", room: "301", type: "Lecture" },
     { time: "10:00-11:00", subject: "OS Lab", code: "18CS2004", instructor: "Prof. Sharma", room: "Lab 2", type: "Practical" },
     { time: "11:30-12:30", subject: "Data Structures", code: "18CS2001", instructor: "Dr. Patel", room: "205", type: "Lecture" },
-    { time: "2:00-3:00", subject: "Computer Networks", code: "18CS3005", instructor: "Prof. Singh", room: "410", type: "Lecture" },
   ],
   Tuesday: [
+    { time: "8:00-8:50", subject: "Transforms and Boundary Value Problems", code: "18MA2001", instructor: "Dr. Math", room: "101", type: "Lecture" },
+    { time: "8:50-9:40", subject: "Transforms and Boundary Value Problems", code: "18MA2001", instructor: "Dr. Math", room: "101", type: "Lecture" },
     { time: "9:00-10:00", subject: "Computer Networks", code: "18CS3005", instructor: "Prof. Singh", room: "410", type: "Lecture" },
     { time: "10:00-11:00", subject: "DBMS", code: "18CS2003", instructor: "Dr. Kumar", room: "301", type: "Lecture" },
     { time: "11:30-12:30", subject: "OS", code: "18CS2002", instructor: "Dr. Reddy", room: "208", type: "Lecture" },
-    { time: "2:00-4:00", subject: "DBMS Lab", code: "18CS2004", instructor: "Prof. Sharma", room: "Lab 3", type: "Practical" },
+    { time: "12:30-1:20", subject: "Data Structures and Algorithms", code: "18CS2001", instructor: "Dr. Patel", room: "205", type: "Lecture" },
+    { time: "1:25-2:15", subject: "Data Structures and Algorithms", code: "18CS2001", instructor: "Dr. Patel", room: "205", type: "Lecture" },
+    { time: "2:20-3:10", subject: "Data Structures and Algorithms", code: "18CS2001", instructor: "Dr. Patel", room: "205", type: "Lecture" },
+    { time: "3:10-4:00", subject: "UHV-II: Universal Human Values", code: "18HS1001", instructor: "Prof. Ethics", room: "Hall 1", type: "Lecture" },
   ],
   Wednesday: [
+    { time: "8:00-8:50", subject: "Computer Organization and Architecture", code: "18CS2005", instructor: "Prof. COA", room: "302", type: "Lecture" },
+    { time: "8:50-9:40", subject: "Computer Organization and Architecture", code: "18CS2005", instructor: "Prof. COA", room: "302", type: "Lecture" },
     { time: "9:00-10:00", subject: "Data Structures", code: "18CS2001", instructor: "Dr. Patel", room: "205", type: "Lecture" },
+    { time: "9:45-10:35", subject: "Transforms and Boundary Value Problems", code: "18MA2001", instructor: "Dr. Math", room: "101", type: "Lecture" },
     { time: "10:00-11:00", subject: "OS", code: "18CS2002", instructor: "Dr. Reddy", room: "208", type: "Lecture" },
+    { time: "10:40-11:30", subject: "Advanced Programming Practice", code: "18CS2004", instructor: "Lab Staff", room: "Lab 2", type: "Practical" },
+    { time: "11:35-12:25", subject: "Data Structures and Algorithms", code: "18CS2001", instructor: "Dr. Patel", room: "205", type: "Lecture" },
     { time: "11:30-12:30", subject: "Python Programming", code: "18CS1005", instructor: "Prof. Gupta", room: "102", type: "Lecture" },
-    { time: "2:00-3:00", subject: "DBMS Tutorial", code: "18CS2003", instructor: "TA Team", room: "301", type: "Tutorial" },
+    { time: "12:30-1:20", subject: "Professional Ethics", code: "18HS1002", instructor: "Prof. Values", room: "Hall 2", type: "Lecture" },
+    { time: "4:00-4:50", subject: "Transforms and Boundary Value Problems", code: "18MA2001", instructor: "Dr. Math", room: "101", type: "Lecture" },
   ],
   Thursday: [
     { time: "9:00-11:00", subject: "Networks Lab", code: "18CS3006", instructor: "Lab Staff", room: "Lab 1", type: "Practical" },
+    { time: "9:45-10:35", subject: "Computer Organization and Architecture", code: "18CS2005", instructor: "Prof. COA", room: "302", type: "Lecture" },
+    { time: "10:40-11:30", subject: "Operating Systems", code: "18CS2002", instructor: "Dr. Reddy", room: "208", type: "Lecture" },
+    { time: "11:35-12:25", subject: "Advanced Programming Practice", code: "18CS2004", instructor: "Lab Staff", room: "Lab 2", type: "Practical" },
     { time: "11:30-12:30", subject: "Computer Networks", code: "18CS3005", instructor: "Prof. Singh", room: "410", type: "Lecture" },
+    { time: "12:30-1:20", subject: "Advanced Programming Practice", code: "18CS2004", instructor: "Lab Staff", room: "Lab 2", type: "Practical" },
+    { time: "1:25-2:15", subject: "Advanced Programming Practice", code: "18CS2004", instructor: "Lab Staff", room: "Lab 2", type: "Practical" },
     { time: "2:00-3:00", subject: "Data Structures", code: "18CS2001", instructor: "Dr. Patel", room: "205", type: "Lecture" },
+    { time: "2:20-3:10", subject: "Data Structures and Algorithms", code: "18CS2001", instructor: "Dr. Patel", room: "205", type: "Lecture" },
   ],
   Friday: [
     { time: "9:00-10:00", subject: "OS", code: "18CS2002", instructor: "Dr. Reddy", room: "208", type: "Lecture" },
     { time: "10:00-11:00", subject: "DBMS", code: "18CS2003", instructor: "Dr. Kumar", room: "301", type: "Lecture" },
-    { time: "11:30-12:30", subject: "Seminar", code: "-", instructor: "Various", room: "Auditorium", type: "Seminar" },
   ],
 };
 
 export const attendanceData = [
   { subject: "Operating Systems", attended: 22, total: 25, percentage: 88, status: "good" },
-  { subject: "DBMS", attended: 18, total: 24, percentage: 75, status: "warning" },
+  { subject: "APP", attended: 18, total: 24, percentage: 75, status: "warning" },
   { subject: "Data Structures", attended: 16, total: 23, percentage: 69.5, status: "danger" },
-  { subject: "Computer Networks", attended: 20, total: 22, percentage: 90.9, status: "good" },
-  { subject: "Python Programming", attended: 19, total: 21, percentage: 90.5, status: "good" },
+  { subject: "COA", attended: 20, total: 22, percentage: 90.9, status: "good" },
+  { subject: "TBVP", attended: 21, total: 24, percentage: 87.5, status: "good" },
 ];
 
 export const notifications = [
-  { id: "1", type: "attendance", icon: "🔴", title: "Attendance Alert", message: "DBMS attendance is 75%. Attend next classes.", time: "2 hours ago", read: false },
+  { id: "1", type: "attendance", icon: "🔴", title: "Attendance Alert", message: "APP attendance is 75%. Attend next classes.", time: "2 hours ago", read: false },
   { id: "2", type: "assignment", icon: "📅", title: "Upcoming Deadline", message: "Data Structures Assignment due in 2 days", time: "3 hours ago", read: false },
   { id: "3", type: "exam", icon: "📝", title: "Exam Reminder", message: "Mid-term exams start next week", time: "5 hours ago", read: true },
   { id: "4", type: "club", icon: "🎉", title: "Club Event", message: "Tech Club hosting Hackathon on Nov 15", time: "1 day ago", read: false },
@@ -222,7 +237,7 @@ export const lostFoundItems = {
   lost: [
     { id: "1", title: "Blue JBL Headphones", location: "Library", date: "Oct 28", postedBy: "Amit Shah", contact: "9876543210", status: "Active", category: "Electronics" },
     { id: "2", title: "Chemistry Textbook", location: "Classroom 302", date: "Oct 27", postedBy: "Sneha Patel", contact: "9876543211", status: "Active", category: "Books" },
-    { id: "3", title: "Student ID Card - Rahul Kumar", location: "Cafeteria", date: "Oct 26", postedBy: "Rahul Kumar", contact: "9876543212", status: "Resolved", category: "ID Cards" },
+    { id: "3", title: "Student ID Card - Pushpanjali", location: "Cafeteria", date: "Oct 26", postedBy: "Pushpanjali", contact: "9876543212", status: "Resolved", category: "ID Cards" },
     { id: "4", title: "Black Umbrella", location: "Basketball Court", date: "Oct 25", postedBy: "Priya Singh", contact: "9876543213", status: "Active", category: "Accessories" },
   ],
   found: [
@@ -385,7 +400,7 @@ export const forumPosts = [
 ];
 
 export const marketplaceItems = [
-  { id: "1", title: "Operating Systems Textbook (Galvin) - 9th Edition", price: 400, originalPrice: 800, condition: "Good", seller: "Rahul_Senior", sellerRating: 4.5, category: "Books", image: "📚", postedDate: "Oct 28" },
+  { id: "1", title: "Operating Systems Textbook (Galvin) - 9th Edition", price: 400, originalPrice: 800, condition: "Good", seller: "Senior_Student", sellerRating: 4.5, category: "Books", image: "📚", postedDate: "Oct 28" },
   { id: "2", title: "Scientific Calculator (Casio fx-991) Like New", price: 600, originalPrice: 1000, condition: "Like New", seller: "Priya_Student", sellerRating: 4.8, category: "Electronics", image: "🔢", postedDate: "Oct 27" },
   { id: "3", title: "Arduino Uno Kit with Sensors", price: 1200, originalPrice: 2000, condition: "Good", seller: "Tech_Geek", sellerRating: 4.7, category: "Lab Equipment", image: "🔌", postedDate: "Oct 26" },
   { id: "4", title: "Data Structures & Algorithms in C++ Book", price: 350, originalPrice: 700, condition: "Fair", seller: "BookWorm_23", sellerRating: 4.3, category: "Books", image: "📚", postedDate: "Oct 25" },
