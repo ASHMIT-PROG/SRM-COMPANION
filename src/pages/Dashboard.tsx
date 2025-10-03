@@ -108,18 +108,18 @@ export default function Dashboard() {
                 {todayClasses.map((cls, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 border border-border"
+                    className="flex items-center gap-4 p-4 rounded-lg border-2"
+                    style={{ 
+                      backgroundColor: cls.color,
+                      borderColor: cls.color
+                    }}
                   >
                     <div className="text-center min-w-[80px]">
-                      <p className="text-sm font-semibold text-primary">{cls.time}</p>
+                      <p className="text-sm font-semibold text-foreground">{cls.time}</p>
                     </div>
                     <div className="flex-1">
                       <p className="font-semibold text-foreground">{cls.subject}</p>
-                      <p className="text-sm text-muted-foreground">
-                        {cls.instructor} • {cls.room}
-                      </p>
                     </div>
-                    <span className="badge-info">{cls.type}</span>
                   </div>
                 ))}
               </div>

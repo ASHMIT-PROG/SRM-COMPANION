@@ -24,19 +24,6 @@ const timeSlots = [
   "4:00-5:00",
 ];
 
-// Convert hex to HSL for better theming
-const getSubjectColor = (subject: string) => {
-  const colors = [
-    "hsl(210 70% 85%)", // Light blue
-    "hsl(30 100% 90%)", // Light orange
-    "hsl(120 60% 85%)", // Light green
-    "hsl(280 60% 85%)", // Light purple
-    "hsl(210 100% 70%)", // Medium blue
-    "hsl(210 100% 40%)", // Dark blue
-  ];
-  const hash = subject.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0);
-  return colors[hash % colors.length];
-};
 
 export default function Timetable() {
   // For demo purposes, always show Thursday as current day
@@ -105,25 +92,20 @@ export default function Timetable() {
                       <div key={slot} className="h-20">
                         {classInfo ? (
                           <div
-                            className="h-full p-2 rounded-lg border flex flex-col justify-between transition-all hover:shadow-md"
+                            className="h-full p-3 rounded-lg border flex items-center justify-center transition-all hover:shadow-md"
                             style={{ 
-                              backgroundColor: getSubjectColor(classInfo.subject),
-                              borderColor: getSubjectColor(classInfo.subject)
+                              backgroundColor: classInfo.color,
+                              borderColor: classInfo.color
                             }}
                           >
-                            <div>
-                              <p className="font-bold text-xs leading-tight text-foreground">
-                                {classInfo.subject}
-                              </p>
-                              <p className="text-[10px] opacity-70 mt-0.5 text-foreground">{classInfo.code}</p>
-                            </div>
-                            <div className="text-[10px] opacity-80 text-foreground">
-                              <p className="font-medium">{classInfo.instructor}</p>
-                              <p>{classInfo.room}</p>
-                            </div>
+                            <p className="font-bold text-sm text-center leading-tight text-foreground">
+                              {classInfo.subject}
+                            </p>
                           </div>
                         ) : (
-                          <div className="h-full border border-dashed border-border rounded-lg bg-muted/10" />
+                          <div className="h-full border border-dashed border-border rounded-lg bg-muted/10 flex items-center justify-center">
+                            <span className="text-muted-foreground text-lg">-</span>
+                          </div>
                         )}
                       </div>
                     );
@@ -150,22 +132,13 @@ export default function Timetable() {
                   key={index}
                   className="p-4 rounded-lg border-2"
                   style={{ 
-                    backgroundColor: getSubjectColor(classInfo.subject),
-                    borderColor: getSubjectColor(classInfo.subject)
+                    backgroundColor: classInfo.color,
+                    borderColor: classInfo.color
                   }}
                 >
-                  <div className="flex justify-between items-start mb-2">
-                    <div>
-                      <p className="font-bold">{classInfo.subject}</p>
-                      <p className="text-sm opacity-80">{classInfo.code}</p>
-                    </div>
+                  <div className="flex justify-between items-center">
+                    <p className="font-bold text-base">{classInfo.subject}</p>
                     <span className="text-sm font-semibold">{classInfo.time}</span>
-                  </div>
-                  <div className="text-sm">
-                    <p className="font-medium">{classInfo.instructor}</p>
-                    <p className="opacity-80">
-                      {classInfo.room} • {classInfo.type}
-                    </p>
                   </div>
                 </div>
               ))}
