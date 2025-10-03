@@ -4,31 +4,43 @@ import { cn } from "@/lib/utils";
 
 const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 const timeSlots = [
+  "8:00-8:50",
+  "8:50-9:40",
   "9:00-10:00",
+  "9:45-10:35",
   "10:00-11:00",
+  "10:40-11:30",
   "11:00-11:30",
   "11:30-12:30",
+  "11:35-12:25",
+  "12:30-1:20",
   "12:30-2:00",
+  "1:25-2:15",
   "2:00-3:00",
+  "2:20-3:10",
   "3:00-4:00",
+  "3:10-4:00",
+  "4:00-4:50",
   "4:00-5:00",
 ];
 
-const subjectColors = [
-  "bg-primary/10 border-primary/30 text-primary",
-  "bg-secondary/10 border-secondary/30 text-secondary",
-  "bg-success/10 border-success/30 text-success",
-  "bg-warning/10 border-warning/30 text-warning",
-  "bg-accent/10 border-accent/30 text-accent",
-];
+// Convert hex to HSL for better theming
+const getSubjectColor = (subject: string) => {
+  const colors = [
+    "hsl(210 70% 85%)", // Light blue
+    "hsl(30 100% 90%)", // Light orange
+    "hsl(120 60% 85%)", // Light green
+    "hsl(280 60% 85%)", // Light purple
+    "hsl(210 100% 70%)", // Medium blue
+    "hsl(210 100% 40%)", // Dark blue
+  ];
+  const hash = subject.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0);
+  return colors[hash % colors.length];
+};
 
 export default function Timetable() {
-  const getColorForSubject = (subject: string) => {
-    const hash = subject.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0);
-    return subjectColors[hash % subjectColors.length];
-  };
-
-  const currentDay = new Date().toLocaleDateString("en-US", { weekday: "long" });
+  // For demo purposes, always show Thursday as current day
+  const currentDay = "Thursday";
 
   return (
     <div className="space-y-6 animate-fade-in">
@@ -52,7 +64,7 @@ export default function Timetable() {
                 {timeSlots.map((time) => (
                   <div
                     key={time}
-                    className="h-24 flex items-center justify-center text-sm font-medium text-muted-foreground border border-border rounded-lg bg-muted/30"
+                    className="h-20 flex items-center justify-center text-xs font-medium text-muted-foreground border border-border rounded-lg bg-muted/30"
                   >
                     {time === "11:00-11:30" ? "Break" : time === "12:30-2:00" ? "Lunch" : time}
                   </div>
@@ -72,36 +84,40 @@ export default function Timetable() {
                   >
                     {day}
                   </div>
-                  {timeSlots.map((slot) => {
+                {timeSlots.map((slot) => {
                     const classInfo = timetable[day as keyof typeof timetable]?.find(
                       (c) => c.time === slot
                     );
                     
+                    // Break slots
                     if (slot === "11:00-11:30" || slot === "12:30-2:00") {
                       return (
                         <div
                           key={slot}
-                          className="h-24 flex items-center justify-center border border-dashed border-border rounded-lg bg-muted/20"
-                        />
+                          className="h-20 flex items-center justify-center border border-dashed border-border rounded-lg bg-muted/20 text-sm text-muted-foreground font-medium"
+                        >
+                          {slot === "11:00-11:30" ? "Break" : "Lunch"}
+                        </div>
                       );
                     }
 
                     return (
-                      <div key={slot} className="h-24">
+                      <div key={slot} className="h-20">
                         {classInfo ? (
                           <div
-                            className={cn(
-                              "h-full p-3 rounded-lg border-2 flex flex-col justify-between transition-all hover:shadow-md",
-                              getColorForSubject(classInfo.subject)
-                            )}
+                            className="h-full p-2 rounded-lg border flex flex-col justify-between transition-all hover:shadow-md"
+                            style={{ 
+                              backgroundColor: getSubjectColor(classInfo.subject),
+                              borderColor: getSubjectColor(classInfo.subject)
+                            }}
                           >
                             <div>
-                              <p className="font-bold text-sm leading-tight">
+                              <p className="font-bold text-xs leading-tight text-foreground">
                                 {classInfo.subject}
                               </p>
-                              <p className="text-xs opacity-80 mt-1">{classInfo.code}</p>
+                              <p className="text-[10px] opacity-70 mt-0.5 text-foreground">{classInfo.code}</p>
                             </div>
-                            <div className="text-xs opacity-90">
+                            <div className="text-[10px] opacity-80 text-foreground">
                               <p className="font-medium">{classInfo.instructor}</p>
                               <p>{classInfo.room}</p>
                             </div>
@@ -132,10 +148,11 @@ export default function Timetable() {
               {timetable[day as keyof typeof timetable]?.map((classInfo, index) => (
                 <div
                   key={index}
-                  className={cn(
-                    "p-4 rounded-lg border-2",
-                    getColorForSubject(classInfo.subject)
-                  )}
+                  className="p-4 rounded-lg border-2"
+                  style={{ 
+                    backgroundColor: getSubjectColor(classInfo.subject),
+                    borderColor: getSubjectColor(classInfo.subject)
+                  }}
                 >
                   <div className="flex justify-between items-start mb-2">
                     <div>

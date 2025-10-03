@@ -15,7 +15,8 @@ import { attendanceData, notifications, timetable, studyMaterials } from "@/data
 
 export default function Dashboard() {
   const today = new Date().toLocaleDateString("en-US", { weekday: "long" });
-  const todayClasses = timetable[today as keyof typeof timetable] || [];
+  // For demo purposes, always show Thursday's schedule
+  const todayClasses = timetable["Thursday"] || [];
   const overallAttendance = Math.round(
     attendanceData.reduce((sum, item) => sum + item.percentage, 0) / attendanceData.length
   );
