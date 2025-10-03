@@ -171,42 +171,34 @@ export const studyMaterials = [
 export const timetable = {
   Monday: [
     { time: "9:00-10:00", subject: "DBMS", color: "#B3D9FF" },
-    { time: "10:00-11:00", subject: "OS Lab", color: "#D9B3FF" },
-    { time: "11:30-12:30", subject: "Data Structures", color: "#CCFFCC" }
+    { time: "10:00-11:00", subject: "OS Lab", color: "#D9B3FF" }
   ],
   Tuesday: [
     { time: "8:00-8:50", subject: "Transforms and Boundary Value Problems", color: "#0066CC" },
     { time: "8:50-9:40", subject: "Transforms and Boundary Value Problems", color: "#0066CC" },
     { time: "9:00-10:00", subject: "Computer Networks", color: "#B3D9FF" },
     { time: "10:00-11:00", subject: "DBMS", color: "#B3D9FF" },
-    { time: "11:30-12:30", subject: "OS", color: "#CCFFCC" },
     { time: "12:30-1:20", subject: "Data Structures and Algorithms", color: "#0066CC" },
     { time: "1:25-2:15", subject: "Data Structures and Algorithms", color: "#9966CC" },
     { time: "2:20-3:10", subject: "Data Structures and Algorithms", color: "#9966CC" },
-    { time: "3:10-4:00", subject: "UHV-II: Universal Human Values", color: "#0066CC" },
-    { time: "4:00-4:50", subject: "Transforms and Boundary Value Problems", color: "#0066CC" }
+    { time: "3:10-4:00", subject: "UHV-II: Universal Human Values...", color: "#0066CC" },
+    { time: "4:00-4:50", subject: "Transforms and Boundary Value P...", color: "#0066CC" }
   ],
   Wednesday: [
-    { time: "8:00-8:50", subject: "Computer Organization and Architecture", color: "#0066CC" },
-    { time: "8:50-9:40", subject: "Computer Organization and Architecture", color: "#0066CC" },
-    { time: "9:45-10:35", subject: "Transforms and Boundary Value Problems", color: "#0066CC" },
+    { time: "8:00-8:50", subject: "Computer Organization and Archi...", color: "#0066CC" },
+    { time: "8:50-9:40", subject: "Computer Organization and Archi...", color: "#0066CC" },
+    { time: "9:45-10:35", subject: "Transforms and Boundary Value P...", color: "#0066CC" },
     { time: "10:40-11:30", subject: "Advanced Programming Practice", color: "#0066CC" },
     { time: "11:35-12:25", subject: "Data Structures and Algorithms", color: "#0066CC" },
     { time: "12:30-1:20", subject: "Professional Ethics", color: "#9966CC" }
   ],
   Thursday: [
-    { time: "9:45-10:35", subject: "Computer Organization and Architecture", color: "#66B3FF" },
-    { time: "10:40-11:30", subject: "Operating Systems", color: "#B3D9FF" },
-    { time: "11:35-12:25", subject: "Advanced Programming Practice", color: "#66B3FF" },
-    { time: "11:30-12:30", subject: "Computer Networks", color: "#CCE5FF" },
     { time: "12:30-1:20", subject: "Advanced Programming Practice", color: "#B3D9FF" },
     { time: "1:25-2:15", subject: "Advanced Programming Practice", color: "#B3D9FF" },
     { time: "2:20-3:10", subject: "Data Structures and Algorithms", color: "#B3D9FF" }
   ],
   Friday: [
-    { time: "9:00-10:00", subject: "OS", color: "#CCFFCC" },
-    { time: "10:00-11:00", subject: "DBMS", color: "#FFE5CC" },
-    { time: "9:45-10:35", subject: "Computer Organization and Architecture", color: "#66B3FF" },
+    { time: "9:45-10:35", subject: "Computer Organization and Archi...", color: "#66B3FF" },
     { time: "10:40-11:30", subject: "Operating Systems", color: "#B3D9FF" },
     { time: "11:35-12:25", subject: "Advanced Programming Practice", color: "#66B3FF" }
   ],
