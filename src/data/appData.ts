@@ -5,7 +5,7 @@ export const demoAccounts = [
     id: "1",
     email: "student@srmist.edu.in",
     password: "password123",
-    name: "Pushpanjali",
+    name: "Student",
     studentId: "RA2111003010001",
     department: "CSE",
     year: "2nd Year",
