@@ -1,73 +1,82 @@
-# Welcome to your Lovable project
+SRM Companion 
+A comprehensive web-based student management system for SRM University students to track attendance, manage study materials, view timetables, and stay organized throughout the semester.
 
-## Project info
+Overview
+SRM Companion is a student portal web application designed to help students manage their academic life efficiently. The application provides a centralized dashboard for tracking attendance, accessing study materials, viewing weekly timetables, and monitoring academic performance.
 
-**URL**: https://lovable.dev/projects/e758b5f4-fb14-4c5f-9fc5-af312ab4cb88
+Overview
+SRM Companion is a student portal web application designed to help students manage their academic life efficiently. The application provides a centralized dashboard for tracking attendance, accessing study materials, viewing weekly timetables, and monitoring academic performance.
 
-## How can I edit this code?
+Attendance Alert System:
 
-There are several ways of editing your application.
+Real-time warnings for courses below 75%
+Current percentage display
+Required classes calculation
+Visual progress bar indicators
 
-**Use Lovable**
+Recent Updates:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e758b5f4-fb14-4c5f-9fc5-af312ab4cb88) and start prompting.
+Announcement feed
+Important notifications
+"View All" option for complete history
 
-Changes made via Lovable will be committed automatically to this repo.
+Study Materials
+Material Management:
 
-**Use your preferred IDE**
+Browse notes, PYQs, assignments, reference books, and lab manuals
+Search by title, subject, or keyword
+Filter by subject (CSE, Data Structures, OS, etc.)
+Filter by material type
+Star rating system (1-5 stars)
+Download tracking with count display
+File size display (MB/KB)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Upload Functionality:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Add new materials via "Add New Material" button
+Form fields:
 
-Follow these steps:
+Title (required)
+Description (required)
+Subject dropdown (required)
+Type dropdown (Notes/PYQ/Assignment/Reference Book/Lab Manual)
+File upload (PDF/DOC/DOCX, max 10MB)
+Optional tags
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Real-time validation
+Instant display after upload
 
-# Step 3: Install the necessary dependencies.
-npm i
+Delete Functionality:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Trash icon on each material card
+Confirmation dialog before deletion
+Instant removal from list
 
-**Edit a file directly in GitHub**
+Material Types:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Notes - Complete course notes
+PYQ - Previous Year Questions with solutions
+Assignments - Course assignments
+Reference Books - Additional reading materials
+Lab Manuals - Laboratory experiment guides
 
-**Use GitHub Codespaces**
+Additional Features
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Lost & Found - Report and find lost items
+Clubs & Societies - Manage club memberships
+Transport Info - Bus routes and schedules
+Marketplace - Buy/sell items with peers
+Placements - Job opportunities and career resources
+Important Links - Quick access to university resources
+Feedback - Submit suggestions and complaints
+Peer Help Forum - Collaborative learning platform
+Profile - Manage personal information
 
-## What technologies are used for this project?
+Tech Stack
+Frontend
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/e758b5f4-fb14-4c5f-9fc5-af312ab4cb88) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+React.js (v18.x) - Component-based UI framework
+React Router (v6.x) - Client-side routing
+Tailwind CSS (v3.x) - Utility-first CSS framework
+Lucide React - Icon library
